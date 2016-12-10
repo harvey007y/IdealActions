@@ -1,0 +1,36 @@
+﻿@model IdealActions.Domain.Strategy
+
+@{
+    ViewBag.Title = " Strategy Details";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<fieldset>
+    <legend>Strategy</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UserName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Rank)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Rank)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.StrategyId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<IdealActions.Domain.Tactic>
+
+@{
+    ViewBag.Title = "List of Tactics";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayName("Strategy")
+        </th>
+        <th>
+            @Html.DisplayName("Abstraction Level")
+        </th>
+        <th>
+            @Html.DisplayName("Action Type")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.strategy.Description)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.tacticAbstractionLevel.AbstractionLevel)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.tacticAccountActionType.ActionType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TacticId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TacticId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TacticId })
+        </td>
+    </tr>
+}
+
+</table>

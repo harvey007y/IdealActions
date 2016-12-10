@@ -1,0 +1,79 @@
+﻿@model IdealActions.Domain.TacticEntry
+
+@{
+    ViewBag.Title = "Edit Tactic Entry";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>TacticEntry</legend>
+
+        @Html.HiddenFor(model => model.TacticEntryId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TacticalDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TacticalDate)
+            @Html.ValidationMessageFor(model => model.TacticalDate)
+        </div>
+
+        
+            @Html.HiddenFor(model => model.UserName)
+        
+
+        <label>Select Tactic<span style="color: red">*</span>:</label> 
+                  @Html.DropDownListFor(model => model.TacticId, new SelectList(ViewBag.TacticList, "TacticId", "Description"), " -- Please select tactic -- ", new { @class = "dropdown"}) 
+                @Html.ValidationMessageFor(m => m.TacticId) 
+          @Html.DropDownList("myhiddenddl",new SelectList(ViewBag.TacticList, "TacticId", "Amount"), " -- Please select tactic -- ", new { @class = "hide"})
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Quantity)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Quantity)
+            @Html.ValidationMessageFor(model => model.Quantity)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Amount)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Amount)
+            @Html.ValidationMessageFor(model => model.Amount)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+<script type="text/javascript">   
+    $(document).ready(function () {
+        $.datepicker.setDefaults({ showOn: 'button', buttonImage: '../../images/calendar.png', buttonImageOnly: true });
+      
+        $("#TacticalDate").datepicker({ dateFormat: 'mm/dd/yy' });
+    });
+    $("#TacticId").change(function () {
+        $("#myhiddenddl").val($("#TacticId").find(":selected").val());
+        $("#Amount").val($("#myhiddenddl").find(":selected").text() * $("#Quantity").val());
+    });
+    $("#Quantity").change(function () {
+        $("#myhiddenddl").val($("#TacticId").find(":selected").val());
+        $("#Amount").val($("#myhiddenddl").find(":selected").text() * $("#Quantity").val());
+    });
+</script>
+}
+

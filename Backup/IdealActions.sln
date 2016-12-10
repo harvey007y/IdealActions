@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdealActions.Domain", "IdealActions.Domain\IdealActions.Domain.csproj", "{6CDC5874-66EA-4945-8CF3-DE2FEF9A2B0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdealActions.Infrastructure", "IdealActions.Infrastructure\IdealActions.Infrastructure.csproj", "{21FC2926-C21A-49F7-B55F-E952473BA467}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdealActions.Site", "IdealActions.Site\IdealActions.Site.csproj", "{9915FF9E-E598-4DA8-BA4E-CD32F462B33D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdealActions.Tests", "IdealActions.Tests\IdealActions.Tests.csproj", "{AEB7D9E8-8573-492C-AD01-57B889444563}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://wadeharvey.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = IdealActions.Domain\\IdealActions.Domain.csproj
+		SccProjectName1 = IdealActions.Domain
+		SccLocalPath1 = IdealActions.Domain
+		SccProjectUniqueName2 = IdealActions.Infrastructure\\IdealActions.Infrastructure.csproj
+		SccProjectName2 = IdealActions.Infrastructure
+		SccLocalPath2 = IdealActions.Infrastructure
+		SccProjectUniqueName3 = IdealActions.Site\\IdealActions.Site.csproj
+		SccProjectName3 = IdealActions.Site
+		SccLocalPath3 = IdealActions.Site
+		SccProjectUniqueName4 = IdealActions.Tests\\IdealActions.Tests.csproj
+		SccProjectName4 = IdealActions.Tests
+		SccLocalPath4 = IdealActions.Tests
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CDC5874-66EA-4945-8CF3-DE2FEF9A2B0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CDC5874-66EA-4945-8CF3-DE2FEF9A2B0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CDC5874-66EA-4945-8CF3-DE2FEF9A2B0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CDC5874-66EA-4945-8CF3-DE2FEF9A2B0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21FC2926-C21A-49F7-B55F-E952473BA467}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21FC2926-C21A-49F7-B55F-E952473BA467}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21FC2926-C21A-49F7-B55F-E952473BA467}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21FC2926-C21A-49F7-B55F-E952473BA467}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9915FF9E-E598-4DA8-BA4E-CD32F462B33D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9915FF9E-E598-4DA8-BA4E-CD32F462B33D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9915FF9E-E598-4DA8-BA4E-CD32F462B33D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9915FF9E-E598-4DA8-BA4E-CD32F462B33D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEB7D9E8-8573-492C-AD01-57B889444563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEB7D9E8-8573-492C-AD01-57B889444563}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEB7D9E8-8573-492C-AD01-57B889444563}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEB7D9E8-8573-492C-AD01-57B889444563}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

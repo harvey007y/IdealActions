@@ -1,0 +1,43 @@
+﻿@model IdealActions.Domain.KnowledgeBaseEntry
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>KnowledgeBaseEntry</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.KnowledgeBaseDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.KnowledgeBaseDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.knowledgeBaseCategory.Category)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.knowledgeBaseCategory.Category)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Details)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Details)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.KnowledgeBaseEntryId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

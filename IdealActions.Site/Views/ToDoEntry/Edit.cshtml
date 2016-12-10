@@ -1,0 +1,99 @@
+﻿@model IdealActions.Domain.ToDoEntry
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>ToDoEntry</legend>
+
+        @Html.HiddenFor(model => model.ToDoEntryId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ToDoDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ToDoDate)
+            @Html.ValidationMessageFor(model => model.ToDoDate)
+        </div>
+
+        
+            @Html.HiddenFor(model => model.UserName)
+        
+
+        <label>Select Tactic<span style="color: red">*</span>:</label> 
+                  @Html.DropDownListFor(model => model.TacticId, new SelectList(ViewBag.TacticList, "TacticId", "Description"), " -- Please select tactic -- ", new { @class = "dropdown"}) 
+                @Html.ValidationMessageFor(m => m.TacticId) 
+          @Html.DropDownList("myhiddenddl",new SelectList(ViewBag.TacticList, "TacticId", "Amount"), " -- Please select tactic -- ", new { @class = "hide"})
+
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OptionalDescription)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OptionalDescription)
+            @Html.ValidationMessageFor(model => model.OptionalDescription)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Details)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Details, new {  @cols = 80, @rows = 9})
+            @Html.ValidationMessageFor(model => model.Details)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Quantity)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Quantity)
+            @Html.ValidationMessageFor(model => model.Quantity)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Amount)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Amount)
+            @Html.ValidationMessageFor(model => model.Amount)
+        </div>
+
+       <label>Select Status<span style="color: red">*</span>:</label> 
+                  @Html.DropDownListFor(model => model.ToDoStatusId, new SelectList(ViewBag.ToDoStatusList, "ToDoStatusId", "Status"), " -- Please select status -- ", new { @class = "dropdown"}) 
+                @Html.ValidationMessageFor(m => m.ToDoStatusId) 
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+<script type="text/javascript">   
+    $(document).ready(function () {
+        $.datepicker.setDefaults({ showOn: 'button', buttonImage: '../../images/calendar.png', buttonImageOnly: true });
+      
+        $("#TacticalDate").datepicker({ dateFormat: 'mm/dd/yy' });
+    });
+    $("#TacticId").change(function () {
+        $("#myhiddenddl").val($("#TacticId").find(":selected").val());
+        $("#Amount").val($("#myhiddenddl").find(":selected").text() * $("#Quantity").val());
+    });
+    $("#Quantity").change(function () {
+        $("#myhiddenddl").val($("#TacticId").find(":selected").val());
+        $("#Amount").val($("#myhiddenddl").find(":selected").text() * $("#Quantity").val());
+    });
+</script>
+}

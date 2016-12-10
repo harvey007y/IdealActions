@@ -1,0 +1,71 @@
+﻿@model IdealActions.Domain.ToDoEntry
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>ToDoEntry</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ToDoDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ToDoDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UserName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tactic.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tactic.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OptionalDescription)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OptionalDescription)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Details)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Details)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Quantity)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Quantity)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Amount)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Amount)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.toDoStatus.Status)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.toDoStatus.Status)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ToDoEntryId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

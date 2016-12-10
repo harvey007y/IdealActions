@@ -1,0 +1,50 @@
+﻿@model IdealActions.Domain.TacticEntry
+
+@{
+    ViewBag.Title = "Details for Tactic Entry";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<fieldset>
+    <legend>TacticEntry</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TacticalDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TacticalDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UserName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tactic.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tactic.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Quantity)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Quantity)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Amount)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Amount)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.TacticEntryId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

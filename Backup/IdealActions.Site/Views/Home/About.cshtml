@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+
+<article>
+    <p>
+        Ideal Actions lets you set up a fake "mad money" checking account that you deposit fake money into when you perform actions that you are trying to
+        perform.  The best way to use the system is have a real savings account with a bank set up so that you can move real money into and out of the real
+        account based on what you are doing in fake "mad money" checking account.  This allows you to use the website to monitor your money without having
+        to be concerned with the security of financial transactions since you will only be performing the real financial transactions manually in your real 
+        savings account when needed.
+    </p>
+
+    <p>
+        This web site was created by Wade Harvey. 
+    </p>
+
+    
+</article>
+
+<aside>
+    <h3>Important Links</h3>
+    <p>
+        Click these links to get started now.
+    </p>
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Tactics Journal", "Index", "TacticEntry")</li>
+                        <li>@Html.ActionLink("To Do List", "Index", "ToDoEntry")</li>
+                        <li>@Html.ActionLink("Knowledge Base", "Index", "KnowledgeBaseEntry")</li>
+    </ul>
+</aside>
