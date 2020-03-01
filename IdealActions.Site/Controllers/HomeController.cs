@@ -11,7 +11,7 @@ namespace IdealActions.Site.Controllers
         public ActionResult Index()
         {
             ViewBag.Message = "Free tool for associating actions with rewards.";
-
+            var version = typeof(Controller).Assembly.GetName().Version.ToString();
             return View();
         }
 

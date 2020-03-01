@@ -235,3 +235,5 @@ C:\Users\harve_nk54qew\Documents\GitHub\IdealActions\IdealActions.Site\obj\Debug
 C:\Users\harve_nk54qew\Documents\GitHub\IdealActions\IdealActions.Site\obj\Debug\IdealActions.Site.csproj.CopyComplete
 C:\Users\harve_nk54qew\Documents\GitHub\IdealActions\IdealActions.Site\obj\Debug\IdealActions.Site.dll
 C:\Users\harve_nk54qew\Documents\GitHub\IdealActions\IdealActions.Site\obj\Debug\IdealActions.Site.pdb
+C:\Users\harve_nk54qew\Documents\GitHub\IdealActions\IdealActions.Site\bin\bin\WebMatrix.Data.dll
+C:\Users\harve_nk54qew\Documents\GitHub\IdealActions\IdealActions.Site\bin\WebMatrix.Data.dll
