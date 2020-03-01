@@ -84,7 +84,7 @@ namespace IdealActions.Site.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(strategy).State = EntityState.Modified;
+                db.Entry(strategy).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

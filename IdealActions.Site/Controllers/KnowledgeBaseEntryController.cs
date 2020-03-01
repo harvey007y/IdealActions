@@ -91,7 +91,7 @@ namespace IdealActions.Site.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(knowledgebaseentry).State = EntityState.Modified;
+                db.Entry(knowledgebaseentry).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

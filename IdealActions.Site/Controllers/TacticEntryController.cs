@@ -95,7 +95,7 @@ namespace IdealActions.Site.Controllers
             {
                 
 
-                db.Entry(tacticentry).State = EntityState.Modified;
+                db.Entry(tacticentry).State = System.Data.Entity.EntityState.Modified;
                 if (tacticentry.tactic != null)
                 {
                     Tactic myTactic = tacticentry.tactic;

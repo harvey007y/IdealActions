@@ -99,7 +99,7 @@ namespace IdealActions.Site.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(todoentry).State = EntityState.Modified;
+                db.Entry(todoentry).State = System.Data.Entity.EntityState.Modified;
                 //if (todoentry.tactic != null)
                 //{
                 //    db.Tactic.Attach(todoentry.tactic);
