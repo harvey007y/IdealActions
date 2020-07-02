@@ -310,8 +310,6 @@
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <None Include="Properties\PublishProfiles\idealactions.com - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\idealactions.com - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\calendar.png" />
     <None Include="Scripts\jquery-3.4.1-vsdoc.js" />
@@ -407,6 +405,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
