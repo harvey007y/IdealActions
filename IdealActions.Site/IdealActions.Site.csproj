@@ -313,6 +313,11 @@
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\calendar.png" />
     <None Include="Scripts\jquery-3.4.1-vsdoc.js" />
+    <Content Include="Images\IdealActionsAbout.PNG" />
+    <Content Include="Images\IdealActionsHome.PNG" />
+    <Content Include="Images\IdealActionsKnowledgebase.PNG" />
+    <Content Include="Images\IdealActionsTacticsJournal.PNG" />
+    <Content Include="Images\IdealActionsToDoList.PNG" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
